@@ -95,7 +95,8 @@ class FloorMap(size: Int) {
         return buildString {
             for (column in floor.indices) {
                 for (row in floor) {
-                    append(row[column])
+                    val value = row[column]
+                    append(if (value == 0) "." else value)
                 }
                 append("\n")
             }
