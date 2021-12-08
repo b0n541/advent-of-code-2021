@@ -94,8 +94,8 @@ class BingoBoard(private val numbers: List<MutableList<Int>>) {
 }
 
 fun BingoBoard(input: List<String>): BingoBoard {
-    val numbers = input.map {
-        it.trim()
+    val numbers = input.map { line ->
+        line.trim()
             .replace("  ", " ")
             .split(" ")
             .map { it.toInt() }
