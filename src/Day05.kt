@@ -88,7 +88,7 @@ class FloorMap(size: Int) {
     }
 
     fun getHotSpots(): Int {
-        return floor.flatten().filter { it > 1 }.count()
+        return floor.flatten().count { it > 1 }
     }
 
     override fun toString(): String {
